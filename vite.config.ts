@@ -10,8 +10,19 @@ export default defineConfig({
 			'@': path.resolve(__dirname, './src'),
 		},
 	},
+	css: {
+		preprocessorOptions: {
+			less: {
+				javascriptEnabled: true,
+				additionalData: `
+        @import "@/assets/css/variables.less";
+        @import "@/assets/css/public.less";
+      `,
+			},
+		},
+	},
 	server: {
-    // 代理跨域
+		// 代理跨域
 		proxy: {
 			'/api/': {
 				target: 'http://127.0.0.1:7001/v1',

@@ -30,6 +30,8 @@ export const appSlice = createSlice({
 	},
 })
 
+export const { setCollapsed, setTheme, setMenuMode } = appSlice.actions
+
 export const selectTheme = (state: { app: AppState }) => state.app.theme
 export const selectCollapsed = (state: { app: AppState }) => state.app.collapsed
 export const selectMenuMode = (state: { app: AppState }) => state.app.menuMode

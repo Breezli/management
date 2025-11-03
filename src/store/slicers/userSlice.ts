@@ -1,7 +1,7 @@
 // 用户信息管理
 
 import { createSlice } from '@reduxjs/toolkit'
-import type { UserInfo } from '../../../app_models/user'
+import type { UserInfo } from '../../app_models/user'
 
 export interface UserState {
 	UserInfo: UserInfo & { is_oidc_user: boolean }
